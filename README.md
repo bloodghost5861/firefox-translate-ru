@@ -43,45 +43,6 @@
 
 Временное дополнение живёт до перезапуска Firefox. Для постоянной установки используйте подписанный `.xpi`.
 
-## Сборка
-
-```bash
-python tools/build_zip.py
-```
-
-Скрипт собирает `firefox-translate-ru.zip` с `manifest.json` в корне и прямыми слэшами в именах файлов
-(Windows-архиватор `Compress-Archive` для AMO не подходит — он пишет `content\main.js`).
-
-## Структура
-
-```
-firefox-translate-ru/     исходники расширения (manifest, background, content, icons, тесты)
-store/                    тексты карточки AMO, политика приватности, скриншоты, иконка
-tools/                    build_zip.py, selftest.js, инструкции
-ci/build.yml              готовый GitHub Actions workflow (не активирован)
-```
-
-Готовый CI лежит в [`ci/build.yml`](ci/build.yml). Чтобы включить его, скопируйте файл в
-`.github/workflows/build.yml` через веб-интерфейс GitHub (или запушьте токеном со scope `workflow`).
-Тогда GitHub Actions будет проверять синтаксис и собирать zip как artifact.
-
-Подробности по коду — в [firefox-translate-ru/README.md](firefox-translate-ru/README.md).
-
-## Тесты
-
-```bash
-node tools/selftest.js
-```
-
-Проверяет провайдеров перевода, нарезку текста и фоновый скрипт (нужен интернет для Google).
-Полные браузерные тесты (Chromium/Firefox через CDP/Marionette) лежат в истории разработки и требуют
-локально установленные браузеры и Windows-пути — см. [tools/README.md](tools/README.md).
-
-## Публикация в AMO
-
-Готовые тексты карточки, политика приватности и чек-лист — в [store/](store/README.md).
-Версия 1.0.3, Manifest V2, минимум Firefox 142 (из-за `data_collection_permissions`).
-
 ## Приватность
 
 Текст страницы отправляется только выбранному сервису перевода (Google, DeepL или ваш LibreTranslate).
