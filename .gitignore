@@ -1,0 +1,8 @@
+/tmp/
+/screenshots/
+.chrome-profile*/
+.ff-profile*/
+node_modules/
+tools/platform-tools/
+tools/webext/
+*.xpi

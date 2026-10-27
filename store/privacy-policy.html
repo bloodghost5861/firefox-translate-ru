@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Политика приватности — Перевод страницы на русский</title>
+  <style>
+    :root { color-scheme: light dark; }
+    body {
+      margin: 0 auto; padding: 32px 20px 64px; max-width: 780px;
+      font: 16px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+      color: #111827; background: #ffffff;
+    }
+    @media (prefers-color-scheme: dark) {
+      body { color: #e5e7eb; background: #111827; }
+      a { color: #93c5fd; }
+      .meta { color: #9ca3af; }
+      code { background: #1f2937; }
+    }
+    h1 { font-size: 1.7em; line-height: 1.25; margin: 0 0 4px; }
+    h2 { font-size: 1.2em; margin: 32px 0 8px; }
+    p, li { margin: 0 0 12px; }
+    ul { padding-left: 22px; }
+    a { color: #2563eb; }
+    .meta { color: #6b7280; font-size: 0.9em; margin-bottom: 24px; }
+    code { background: #f3f4f6; padding: 1px 5px; border-radius: 5px; font-size: 0.92em; }
+    .note { border-left: 4px solid #93c5fd; background: #eff6ff; padding: 12px 16px; border-radius: 8px; }
+    @media (prefers-color-scheme: dark) {
+      .note { background: #1f2937; border-color: #3b82f6; }
+    }
+  </style>
+</head>
+<body>
+  <h1>Политика приватности</h1>
+  <p class="meta">Расширение «Перевод страницы на русский» · действует с 27 октября 2026 г.</p>
+
+  <p class="note">
+    Расширение не имеет собственного сервера, не собирает статистику и не использует аналитику.
+    Единственные данные, которые оно передаёт, — текст страниц, которые вы сами решили перевести.
+    Текст уходит только тому сервису перевода, который вы выбрали в настройках.
+  </p>
+
+  <h2>Какие данные передаются</h2>
+  <ul>
+    <li><strong>Текст страницы.</strong> Когда вы нажимаете кнопку перевода, расширение отправляет фрагменты
+      текста выбранному сервису, чтобы получить перевод.</li>
+    <li><strong>Языки.</strong> Код исходного языка (или <code>auto</code>) и целевого языка.</li>
+    <li><strong>Технические данные запроса.</strong> Как при любом обращении к сайту, сервис перевода получает
+      IP-адрес, User-Agent и время запроса. Расширение не добавляет к этому ничего своего.</li>
+  </ul>
+  <p>Расширение <strong>не</strong> собирает историю просмотров, список открытых страниц, учётные данные,
+    данные форм, местоположение, идентификаторы устройства или рекламные идентификаторы.</p>
+
+  <h2>Кому передаются данные</h2>
+  <p>Только выбранному вами сервису:</p>
+  <ul>
+    <li><strong>Google</strong> — <a href="https://translate.googleapis.com" rel="noreferrer">translate.googleapis.com</a>
+      (публичный endpoint переводчика). <a href="https://policies.google.com/privacy" rel="noreferrer">Политика Google</a>.</li>
+    <li><strong>DeepL</strong> — <code>api-free.deepl.com</code> или <code>api.deepl.com</code>.
+      <a href="https://www.deepl.com/privacy" rel="noreferrer">Политика DeepL</a>.</li>
+    <li><strong>LibreTranslate</strong> — сервер, адрес которого вы указали. Если это ваш сервер, данные остаются у вас.</li>
+  </ul>
+
+  <h2>Что хранится локально</h2>
+  <p>В локальном хранилище расширения (<code>browser.storage.local</code>) хранятся: выбранный сервис,
+    языки, флажок «Переводить всегда», ключ DeepL и/или адрес и ключ LibreTranslate, позиция кнопки.
+    Эти данные не покидают устройство, не синхронизируются и удаляются вместе с расширением.
+    Ключи хранятся в открытом виде в локальном хранилище браузера — это стандартное поведение WebExtensions.</p>
+
+  <h2>Срок хранения</h2>
+  <p>Расширение не хранит переведённый текст и не ведёт журналов. Срок хранения запросов на стороне
+    сервиса перевода определяется его политикой.</p>
+
+  <h2>Дети</h2>
+  <p>Расширение не предназначено для детей и не собирает данные о них.</p>
+
+  <h2>Изменения</h2>
+  <p>При изменении политики обновится дата в начале документа и версия расширения на AMO.</p>
+
+  <h2>Контакт</h2>
+  <p>По вопросам приватности: <a href="mailto:wghost404@gmail.com">wghost404@gmail.com</a>.</p>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CSP test page</title>
+</head>
+<body>
+  <h1>A page without inline styles</h1>
+  <p>
+    This page is deliberately served with a strict Content-Security-Policy that blocks inline styles.
+    If the floating button still looks like a round blue button, the extension's Shadow DOM styles
+    survive the page policy.
+  </p>
+  <p>
+    Modern sites often use strict policies, so the translator must keep working there as well.
+    The text on this page is long enough to be translated in a single batch.
+  </p>
+  <pre><code>const untouched = 'code block';</code></pre>
+</body>
+</html>
