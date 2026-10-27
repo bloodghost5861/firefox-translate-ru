@@ -3,7 +3,7 @@
 Расширение для Firefox (Android и компьютер). Добавляет на каждую страницу плавающую кнопку:
 одно нажатие переводит текст страницы на русский, повторное — возвращает оригинал.
 
-[**Скачать `firefox-translate-ru.zip`**](firefox-translate-ru.zip) · [Инструкция по установке](firefox-translate-ru/README.md) · [Материалы для AMO](store/README.md)
+[**Скачать подписанный `.xpi`**](https://github.com/bloodghost5861/firefox-translate-ru/releases/latest) · [**Скачать `firefox-translate-ru.zip`**](firefox-translate-ru.zip) · [Инструкция по установке](firefox-translate-ru/README.md) · [Материалы для AMO](store/README.md)
 
 ![Переведённая страница](store/screenshots/01-translated.png)
 
@@ -25,8 +25,9 @@
 
 Официальный способ — установка из подписанного `.xpi`:
 
-1. Скачайте подписанный `.xpi` (из письма AMO / Developer Hub; если он опубликован в Releases — оттуда).
-   Файл `firefox-translate-ru.zip` из этого репозитория — **неподписанный** пакет для AMO, а не для установки.
+1. Скачайте подписанный `.xpi` из [Releases](https://github.com/bloodghost5861/firefox-translate-ru/releases/latest)
+   (`page-translate-ru-1.0.3.xpi`; SHA-256 `C44C457D5736E4C577DF8408F83900634D7D7571FD36925883228050613CAB45`).
+   Файл `firefox-translate-ru.zip` из репозитория — **неподписанный** пакет для AMO, а не для установки.
 2. Перекиньте файл в «Загрузки» на телефоне.
 3. Firefox → **Настройки** → **О Firefox** → пять раз нажмите на логотип Firefox.
 4. **Настройки** → **«Установить расширение из файла»** → выберите `.xpi` → **Добавить**.
