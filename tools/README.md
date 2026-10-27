@@ -30,4 +30,6 @@ node tools/store_shots.js
 
 ## CI
 
-`.github/workflows/build.yml` проверяет синтаксис JS и собирает zip; архив доступен как artifact сборки.
+Готовый workflow лежит в [`ci/build.yml`](../ci/build.yml). Он не активирован: чтобы GitHub Actions
+запускался, скопируйте файл в `.github/workflows/build.yml` через веб-интерфейс GitHub или запушьте
+токеном со scope `workflow`. Workflow проверяет синтаксис JS и собирает zip как artifact.

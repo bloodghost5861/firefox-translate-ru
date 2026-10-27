@@ -1,0 +1,33 @@
+name: build
+
+on:
+  push:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Check JavaScript syntax
+        run: |
+          for file in firefox-translate-ru/background.js \
+                      firefox-translate-ru/lib/providers.js \
+                      firefox-translate-ru/content/text.js \
+                      firefox-translate-ru/content/ui.js \
+                      firefox-translate-ru/content/main.js; do
+            node --check "$file"
+          done
+
+      - name: Build extension package
+        run: python tools/build_zip.py
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: firefox-translate-ru
+          path: firefox-translate-ru.zip

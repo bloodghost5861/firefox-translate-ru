@@ -57,8 +57,12 @@ python tools/build_zip.py
 firefox-translate-ru/     исходники расширения (manifest, background, content, icons, тесты)
 store/                    тексты карточки AMO, политика приватности, скриншоты, иконка
 tools/                    build_zip.py, selftest.js, инструкции
-.github/workflows/        сборка zip в GitHub Actions
+ci/build.yml              готовый GitHub Actions workflow (не активирован)
 ```
+
+Готовый CI лежит в [`ci/build.yml`](ci/build.yml). Чтобы включить его, скопируйте файл в
+`.github/workflows/build.yml` через веб-интерфейс GitHub (или запушьте токеном со scope `workflow`).
+Тогда GitHub Actions будет проверять синтаксис и собирать zip как artifact.
 
 Подробности по коду — в [firefox-translate-ru/README.md](firefox-translate-ru/README.md).
 
